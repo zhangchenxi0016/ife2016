@@ -1,0 +1,416 @@
+html {
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    width: 100%;
+    min-width: 1280px;
+    font-family: 'Microsoft YaHei';
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+header {
+    position: relative;
+    height: 60px;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    position: absolute;
+    width: 40%;
+    left: 40%;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+}
+
+li {
+    width: 20%;
+    float: left;
+    line-height: 60px;
+    text-align: center;
+    transition: color 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.banner-right {
+    width: 10%;
+    left: 90%;
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 60px;
+    font-size: 14px;
+}
+
+.banner-left {
+    vertical-align: middle;
+    left: 10%;
+    width: 15%;
+    position: absolute;
+    display: inline-block;
+    line-height: 60px;
+    font-size: 24px;
+}
+
+li:hover {
+    color: #F04C57;
+}
+
+ul .move {
+    position: absolute;
+    border-top: 4px solid #e53c3c;
+    top: 55px;
+    transition: left 0.4s ease-in-out;
+    left: 0;
+}
+
+li:nth-child(1):hover~ .move {
+    left: 0px;
+}
+
+li:nth-child(2):hover~ .move {
+    left: 20%;
+}
+
+li:nth-child(3):hover~ .move {
+    left: 40%;
+}
+
+li:nth-child(4):hover~ .move {
+    left: 60%;
+}
+
+li:nth-child(5):hover~ .move {
+    left: 80%;
+}
+
+#section1 {
+    height: 650px;
+    background-image: url(../img/pic4.png);
+    background-size: 100% auto;
+}
+
+.black-lumb {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.2;
+}
+
+#section1 .mes {
+    position: absolute;
+    top: 170px;
+    left: 120px;
+}
+
+#section1 .mes p {
+    color: #fff;
+    margin: 0px;
+    font-size: 22px;
+}
+
+#section1 .mes p:first-child {
+    font-family: Arial;
+    font-size: 60px;
+    line-height: 100px;
+    letter-spacing: 3px;
+}
+
+#section1 .mes span {
+    width: 300px;
+    height: 60px;
+    text-align: center;
+    font-size: 22px;
+    line-height: 60px;
+    background: #e53c3c;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+#section2 {
+    height: 240px;
+}
+
+#section2 .cell {
+    width: 25%;
+    height: 100%;
+    display: inline-block;
+}
+
+#section2 .cell {
+    text-align: center;
+}
+
+#section2 .cell .img {
+    height: 130px;
+    line-height: 130px;
+}
+
+#section2 .cell .mes {
+    height: 50px;
+    font-size: 13px;
+    line-height: 25px;
+    border-right: #534141 solid 2px;
+}
+
+#section2 .cell:last-child .mes {
+    border: none;
+}
+
+#section3 {
+    height: 400px;
+    background: #edeaea;
+    text-align: center;
+    position: relative;
+}
+
+#section3 .img {
+    display: inline-block;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+}
+
+#section3 .mes {
+    width: 100%;
+    position: absolute;
+    top: 200px;
+    font-size: 50px;
+    color: #000;
+    display: inline-block;
+}
+
+#section4 {
+    height: 300px;
+    position: relative;
+}
+
+#section4 img {
+    width: 100%;
+}
+
+.pink-lump {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #E1ABC3;
+    opacity: 0.3;
+}
+
+#section4 .mes {
+    width: 100%;
+    position: absolute;
+    top: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 13px;
+}
+
+#section4 .mes p:first-child {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+#section4 .mes span {
+    width: 20px;
+    height: 2px;
+    display: inline-block;
+    border-top: 2px solid #fff;
+    transition: width 0.4s ease-in-out;
+}
+
+#section4 .mes span:hover {
+    width: 300px;
+}
+
+#section4 .input {
+    top: 150px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 60px;
+}
+
+#section4 .input input {
+    position: absolute;
+    top: 50px;
+    width: 15%;
+    margin-left: 25px;
+    height: 36px;
+    z-index: 10;
+    display: block;
+}
+
+#section4 .input select {
+    position: absolute;
+    top: 50px;
+    width: 15%;
+    margin-left: 25px;
+    height: 36px;
+    z-index: 10;
+    display: block;
+}
+
+#section4 .input select:nth-child(1) {
+    left: 10%;
+}
+
+#section4 .input select:nth-child(2) {
+    left: 32%;
+}
+
+#section4 .input select:nth-child(3) {
+    left: 54%;
+}
+
+#section4 .input input:nth-child(4) {
+    left: 76%;
+}
+
+select {
+    /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+    border: solid 1px #000;
+    /*很关键：将默认的select选择框样式清除*/
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    /*在选择框的最右侧中间显示小箭头图片*/
+    background: #fff url(" ../img/ico1.png") no-repeat scroll right center;
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+    padding-right: 14px;
+}
+
+#section5 {
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+#section5 img {
+    width: 200px;
+    height: 300px;
+}
+
+#section5 .cell {
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    cursor: pointer;
+    vertical-align: middle;
+    height: 400px;
+    top: 50px;
+}
+
+#section5 div:nth-child(1) {
+    left: 10%;
+}
+
+#section5 div:nth-child(2) {
+    left: 32%;
+}
+
+#section5 div:nth-child(3) {
+    left: 54%;
+}
+
+#section5 div:nth-child(4) {
+    left: 76%;
+}
+
+#section5 .p1 {
+    font-size: 14px;
+    color: #44403f;
+}
+
+#section5 .p2 {
+    font-size: 12px;
+    color: #B3AFAC;
+}
+
+#section5 .cell:hover .p1 {
+    font-size: 24px;
+    letter-spacing: 30px;
+    text-indent: 30px;
+    margin-top: 0px;
+}
+
+#section5 .cell:hover .mes {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#section5 .cell:hover .img {
+    width: 100%;
+    position: absolute;
+    top: 84px;
+    left: 0px;
+}
+
+#section6 {
+    width: 100%;
+    height: 560px;
+}
+
+#section6 .left {
+    width: 68%;
+    height: 560px;
+    float: left;
+}
+
+#section6 .right {
+    width: 32%;
+    height: 560px;
+    float: right;
+    position: relative;
+}
+#section6 .right .wrapper{
+	text-align: center;
+	width: 100%;
+	margin: auto;
+}
+#section6 .right input{
+	position: relative;
+	width: 10px;
+	height: 10px;
+	top:450px;
+}
+#section6 .wrapper .mes{
+	position: absolute;
+	top:100px;
+	width:50%;
+	left:25%;
+}
+#section6 .span{
+	position: relative;
+	top:340px;
+}
+#section6 .mes p:nth-child(1) {
+	font-size:20px;
+	font-weight:700;
+	color:#000;
+}
+#section6 .mes span{
+	color: #be4f48;
+}
+#section6 .mes p:nth-child(2) {
+	font-size:14px;
+	line-height:25px;
+	color:#B3AFAC;
+}
