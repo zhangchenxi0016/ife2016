@@ -367,36 +367,40 @@ select {
     width: 100%;
     height: 560px;
 }
-
+#section6 img{
+	height: 560px;
+}
 #section6 .left {
-    width: 68%;
+    width: 990px;
     height: 560px;
-    float: left;
 }
 
 #section6 .right {
-    width: 32%;
     height: 560px;
-    float: right;
+   	width: 100%;
     position: relative;
 }
 #section6 .right .wrapper{
 	text-align: center;
 	width: 100%;
+	height: 560px;
 	margin: auto;
 }
 #section6 .right input{
 	position: relative;
-	width: 10px;
-	height: 10px;
+	width: 15px;
+	height: 15px;
 	top:450px;
 }
 #section6 .wrapper .mes{
 	position: absolute;
 	top:100px;
 	width:50%;
-	left:25%;
+	margin-left: -25%;
+	left: 50%;
+
 }
+
 #section6 .span{
 	position: relative;
 	top:340px;
@@ -413,4 +417,36 @@ select {
 	font-size:14px;
 	line-height:25px;
 	color:#B3AFAC;
+}
+#section6 .right input:checked~ .mes{
+	display: none;
+}
+#section6 .right input:nth-child(1):checked~ .mes1{
+	display: block;
+}
+#section6 .right  input:nth-child(2):checked~ .mes2{
+	display: block;
+}
+#section6 .right  input:nth-child(3):checked~ .mes3{
+	display: block;
+}
+.mes2{
+
+	display: none;
+
+}
+.mes3{
+
+	display: none;
+
+}
+#section6 .right .span{
+	position: relative;
+	margin-left:-100px;
+	left: 50%;
+	width: 200px;
+	line-height: 30px;
+	border:2px solid #e53c3c;
+	font-weight:10;
+	color: #e53c3c;
 }
