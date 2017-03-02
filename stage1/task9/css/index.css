@@ -1,61 +1,317 @@
-body
-{
-	height:100%;
-	width:100%;
-	font-family: "微软雅黑";
-	min-width: 1024px;
-	margin:0px;
+body {
+    height: 100%;
+    width: 100%;
+    font-family: "微软雅黑";
+    min-width: 1024px;
+    margin: 0px;
+}
 
+header {
+    width: 100%;
+    height: 60px;
+    background: #2189bf;
 }
-header{
-	width: 100%;
-	height:60px;
-	background:#2189bf;
-	
-}
-header div{
-	height:45px;
-	width: 100%;
-	margin: 0px auto; 
-	position: relative;
-}
-header input{
-	position: absolute;
-	left: 60%;
-	border-radius: 14px;
-	background:#fff url(../img/zoom.png) no-repeat 17px 2px;
-	bottom: 0px;
 
+header div {
+    height: 45px;
+    width: 100%;
+    margin: 0px auto;
+    position: relative;
 }
-header span{
-	position: absolute;
-	left: 80%;
-	color: #fff;
-	bottom: 0px;
-	vertical-align: middle;
 
+header input {
+    position: absolute;
+    left: 60%;
+    border-radius: 14px;
+    background: #fff url(../img/zoom.png) no-repeat 17px 2px;
+    bottom: 0px;
 }
-.logo{
-	position: absolute;
-	left:10%;
-	bottom: 0px;
+
+header span {
+    position: absolute;
+    left: 80%;
+    color: #fff;
+    bottom: 0px;
+    vertical-align: middle;
 }
-header span img{
-	position: relative;
+
+.logo {
+    position: absolute;
+    left: 10%;
+    bottom: 0px;
+}
+
+header span img {
+    position: relative;
+    display: inline-block;
+    padding-right: 5px;
+    bottom: 0px;
+    margin-bottom: -2px;
+}
+
+.leftdiv {
+    width: 230px;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0px;
+    float: left;
+    background: #2a2e3d;
+    color: #67778b;
+    padding-top: 19px;
+}
+
+.rightdiv {
+    width: calc(100% - 230px);
+    height: 100%;
+    margin-left: 230px;
+    box-sizing: border-box;
+    background: #eeeeed;
+    margin-top: 0px;
+    color: gray;
+}
+
+.leftdiv .div1 div {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 1px solid #b9babd;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.leftdiv div strong {
+    margin-left: 10px;
+}
+
+.leftdiv div div span {
+    width: 47px;
+    height: 47px;
+    background: #b9babd;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 4px;
+    margin-left: 4px;
+    z-index: 10;
+}
+
+.leftdiv .div1 {
+    margin-left: 32px;
+    height: 80px;
+    color: #fff;
+}
+
+.leftdiv .sp1 {
+    width: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 20px;
+    font-size: 14px;
+    font-family: 'SimSun';
+    color: #67778b;
+}
+
+.leftdiv ul {
+    line-height: 80px;
+    margin-left: 10px;
+}
+
+.leftdiv ul ul {
+    line-height: 40px;
+    margin-left: 10px;
+}
+
+.leftdiv .li:nth-child(1) {
+    list-style-image: url("../img/file_open.png");
+}
+
+.leftdiv .li:nth-child(2) {
+    list-style-image: url("../img/star.png");
+}
+
+.leftdiv .li:nth-child(3) {
+    list-style-image: url("../img/share.png");
+}
+
+.leftdiv .li:nth-child(4) {
+    list-style-image: url("../img/star.png");
+}
+
+.leftdiv .li:nth-child(5) {
+    list-style-image: url("../img/star.png");
+}
+
+.leftdiv .li:nth-child(6) {
+    list-style-image: url("../img/user_info.png");
+}
+
+.leftdiv ul ul li {
+    list-style-image: url("../img/file_close.png");
+}
+
+.leftdiv ul ul ul li {
+    list-style-image: url("../img/doc_open.png");
+}
+
+.leftdiv .li {
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.rightdiv .title {
+    width: 100%;
+    height: 30px;
+    background: #fff;
+    color: gray;
+    padding-left: 30px;
+    font-size: 12px;
+    line-height: 30px;
+}
+
+.rightdiv .title p {
+    margin-top: 0px;
+}
+
+.rightdiv .title span {
+    color: blue;
+}
+
+section {
+    background: #fff;
+    margin: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+}
+
+.rightdiv section:nth-child(1) {
+    height: 100px;
+    position: relative;
+    font-size: 12px;
+}
+
+.rightdiv section:nth-child(1) form {
+    display: flex;
+    flex-direction: row;
+}
+
+.rightdiv section:nth-child(1) form div:nth-child(1) {
+    width: 20%;
+    height: 100px;
+    text-align: center;
+    padding:auto;
+}
+
+.rightdiv section:nth-child(1) form div:nth-child(2) {
+    width: 20%;
+    height: 100px;
+    padding:auto;
+}
+
+.rightdiv section:nth-child(1) form div:nth-child(3) {
+    width: 40%;
+   padding:auto;
+    height: 100px;
+}
+
+.rightdiv section:nth-child(1) form div:nth-child(4) {
+    width: 10%;
+    height: 100px;
+    padding:auto;
+}
+
+.rightdiv section:nth-child(1) span {
+    color: #aaa;
+    line-height: 26px;
+    padding: 0 9px 0 0;
+    margin-bottom: 5px;
+}
+
+.rightdiv section:nth-child(1) select {
 	display: inline-block;
-	padding-right: 5px;
-	bottom: 0px;
+    -webkit-appearance: none;
+    border: 1px solid #cacbcb;
+    height: 24px;
+    background: url(../img/blue_arrow.png) no-repeat 90% 9px;
+    line-height: 24px;
+    padding-left: 3px;
+    cursor: pointer;
+    margin-bottom: 5px;
 }
-.leftdiv{
-	width: 200px;
-	height: 100%;
-	box-sizing: border-box;	
-	margin: 20px;
-	float: left;
+.rightdiv section:nth-child(1) input[type="submit"]{
+	margin-top: 40px;
+	color: #fff;
+	background: #388ac1;
+	border:none;
 }
-.rightdiv{
-	width: calc(100%-300px);
-	height:100%;
-	float: right;
-	box-sizing: border-box;
+.w70 {
+    width: 70px;
+    margin: 5px;
+}
+
+.w120 {
+    width: 100px;
+     margin: 5px;
+}
+.rightdiv section:nth-child(2){
+	height: 80px;
+	display: flex;
+	flex-direction: row; 
+	background: #eeeeed;
+}
+.rightdiv section:nth-child(2) div{
+	width:12%;
+	margin: 3px;
+	background: #fff;
+}
+.rightdiv section:nth-child(2) .arrow{
+	width: 20px;
+	padding-left:10px;
+	padding-top:30px;
+}
+.rightdiv section:nth-child(2) .arrow div{
+	width:10px;
+	height:10px;
+	transform: rotateZ(45deg);
+	margin:0px;
+}
+
+.la{
+	border-left: 1px solid gray;
+	border-bottom: 1px solid gray;
+}
+.ra{
+	border-right: 1px solid gray;
+	border-top: 1px solid gray;
+}
+.rightdiv section:nth-child(2) div p{
+	font-size: 12px;
+	color: #000;
+	letter-spacing: 1px;
+	line-height: 20px;
+	text-align:center;
+}
+.rightdiv section:nth-child(2)  div p span:nth-child(3){
+	font-size: 21px;
+	color: #ec6602;
+	letter-spacing: 2px;
+	line-height: 40px
+}
+.rightdiv section:nth-child(2)  div p span:nth-child(2){
+	font-size: 21px;
+	color: gray;
+	letter-spacing: 2px;
+	line-height: 40px
+}
+.rightdiv section  div:last-child span{
+	color: #535353;
+	font-size: 12px;
+	line-height: 80px;
+}
+.rightdiv section  div:last-child img{
+vertical-align: middle;
+margin-right:5px;
+margin-left: 1px;
+}
+.rightdiv section:nth-child(2) div:hover{
+border-top: 2px solid blue;
 }
