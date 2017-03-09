@@ -47,7 +47,7 @@ var chartData = {};
 
 // 记录当前页面的表单选项
 var pageState = {
-  nowSelectCity: -1,
+  nowSelectCity: "北京",
   nowGraTime: "day"
 };
 
@@ -55,7 +55,7 @@ var pageState = {
  * 渲染图表
  */
 function renderChart() {
-  chartData=aqiSourceData["北京"];
+
   var divChart=document.getElementsByClassName("aqi-chart-wrap")[0];
   var divChartHtml="";
   var m=1;
@@ -75,6 +75,16 @@ function graTimeChange() {
   // 设置对应数据
 
   // 调用图表渲染函数
+    if(typeof(this.value)!='string')
+    {return;}
+  if(pageState.nowGraTime==this.value){
+    return;
+  }else{
+    pageState.nowGraTime=this.value;
+    initAqiChartData();
+    renderChart();
+  }
+
 }
 
 /**
@@ -86,13 +96,26 @@ function citySelectChange() {
   // 设置对应数据
 
   // 调用图表渲染函数
+  if(typeof(this.value)!='string')
+    {return;}
+  if(pageState.nowSelectCity==this.value){
+    return;
+  }else{
+    pageState.nowSelectCity=this.value;
+    initAqiChartData();
+
+  }
+      renderChart();
 }
 
 /**
  * 初始化日、周、月的radio事件，当点击时，调用函数graTimeChange
  */
 function initGraTimeForm() {
-
+  var radios=document.getElementsByTagName("input");
+  for(var item in radios){
+    radios[item].onchange=graTimeChange;
+  }
 }
 
 /**
@@ -102,7 +125,14 @@ function initCitySelector() {
   // 读取aqiSourceData中的城市，然后设置id为city-select的下拉列表中的选项
 
   // 给select设置事件，当选项发生变化时调用函数citySelectChange
+  var select=document.getElementById("city-select");
+  var html="";
+  for(var item in aqiSourceData){
+    html+="<option>"+item+"</option>";
+  }
+ select.innerHTML=html;
 
+ select['onchange']=citySelectChange;
 }
 
 /**
@@ -111,6 +141,44 @@ function initCitySelector() {
 function initAqiChartData() {
   // 将原始的源数据处理成图表需要的数据格式
   // 处理好的数据存到 chartData 中
+  chartData=[];
+if(pageState.nowGraTime=='day'){
+    chartData=aqiSourceData[pageState.nowSelectCity];
+}else if(pageState.nowGraTime=='week'){
+    var tmpchar=aqiSourceData[pageState.nowSelectCity];
+    var i=1;
+    var n=1;
+    var zs=0;
+    for(var item in tmpchar)
+    { 
+      zs+=tmpchar[item];
+      i++;
+      if(i/7==1)
+      {
+        chartData['2016年第'+n+'周']=zs/7;
+        i=1;
+        zs=0;
+        n++;
+      }
+    }
+}else if(pageState.nowGraTime=='month'){
+    var tmpchar=aqiSourceData[pageState.nowSelectCity];
+    var i=1;
+    var n=1;
+    var zs=0;
+    for(var item in tmpchar)
+    { 
+      zs+=tmpchar[item];
+      i++;
+      if(i/30==1)
+      {
+        chartData['2016年第'+n+'月']=zs/30;
+        i=1;
+        zs=0;
+        n++;
+      }
+    }
+}
 }
 
 /**

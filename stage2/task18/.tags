@@ -1,0 +1,14 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+aqiSourcceData	.\js\index.js	/^var aqiSourcceData=[];$/;"	v
+init	.\js\index.js	/^function init(){$/;"	f
+initButton	.\js\index.js	/^function initButton(){$/;"	f
+leftAdd	.\js\index.js	/^function  leftAdd(){$/;"	f
+leftRemove	.\js\index.js	/^function leftRemove(){$/;"	f
+renderList	.\js\index.js	/^function renderList(){$/;"	f
+rightAdd	.\js\index.js	/^function rightAdd(){$/;"	f
+rightRemove	.\js\index.js	/^function rightRemove(){$/;"	f
