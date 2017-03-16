@@ -21,7 +21,7 @@ function initButton() {
 /*左侧插入*/
 function leftAdd() {
 var Num=getNum();
-if(Num===undefined)
+if(Num===undefined&&Num!=NaN)
 {
   return;
 }
@@ -32,7 +32,7 @@ renderList();
 /*右侧插入*/
 function rightAdd() {
 var Num=getNum();
-if(Num===undefined)
+if(Num===undefined&&Num!=NaN)
 {
   return;
 }
@@ -55,14 +55,14 @@ function renderList() {
   var listDiv=document.getElementById("listDiv");
   var html="";
   for(var i=0;i<aqiSourcceData.length;i++){
-    html+="<div style='background-color:red;color:#fff;width:80px;height:80px;margin-right:10px;font-size:40px;line-height:80px'>"+aqiSourcceData[i]+"</div>";
+    html+="<div style='background-color:red;color:#fff;height:"+aqiSourcceData[i]+"px;margin-right:10px;font-size:40px;line-height:80px;width:20px;'></div>";
   }
 listDiv.innerHTML=html;
 }
 /*合法判断*/
 function getNum(){
  var Num=parseInt(document.getElementById('inputNum').value);
- if(true){
+ if(true&&Num!=0){
   return Num;
  }
 }
