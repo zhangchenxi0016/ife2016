@@ -1,11 +1,16 @@
-aqiSourcceData	js\index.js	/^var aqiSourcceData=[];$/;"	v
-init	js\index.js	/^function init(){$/;"	f
-initButton	js\index.js	/^function initButton(){$/;"	f
-leftAdd	js\index.js	/^function  leftAdd(){$/;"	f
-leftRemove	js\index.js	/^function leftRemove(){$/;"	f
-renderList	js\index.js	/^function renderList(){$/;"	f
-rightAdd	js\index.js	/^function rightAdd(){$/;"	f
-rightRemove	js\index.js	/^function rightRemove(){$/;"	f
+aqiSourcceData	js\index.js	/^var aqiSourcceData = [];$/;"	v
+getNum	js\index.js	/^function getNum() {$/;"	f
+init	js\index.js	/^function init() {$/;"	f
+initButton	js\index.js	/^function initButton() {$/;"	f
+initList	js\index.js	/^function initList() {$/;"	f
+leftAdd	js\index.js	/^function leftAdd() {$/;"	f
+leftRemove	js\index.js	/^function leftRemove() {$/;"	f
+lenalert	js\index.js	/^function lenalert(){$/;"	f
+maopaoSort	js\index.js	/^function maopaoSort() {$/;"	f
+maopaoSort.run	js\index.js	/^    function run() {$/;"	f
+renderList	js\index.js	/^function renderList() {$/;"	f
+rightAdd	js\index.js	/^function rightAdd() {$/;"	f
+rightRomove	js\index.js	/^function rightRomove() {$/;"	f
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_PROGRAM_VERSION	5.8	//
