@@ -3,11 +3,7 @@ var nodeList = [];
 
 function init() {
     var input = document.getElementsByTagName("input");
-    input[0].onclick = function() {
-        nodeList = [];
-        preOrder(document.getElementById('root'));
-        render();
-    };
+    input[0].onclick = preOrderClick;
     input[1].onclick = function() {
         nodeList = [];
         inOrder(document.getElementById('root'));
@@ -19,7 +15,11 @@ function init() {
         render();
     };
 }
-
+function preOrderClick(){
+         nodeList = [];
+        preOrder(document.getElementById('root'));
+        render();
+}
 function inOrder(treeRoot) {
     if (treeRoot != null) {
         preOrder(treeRoot.firstElementChild);

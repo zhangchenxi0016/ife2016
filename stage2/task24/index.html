@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>task 24</title>
+    <meta charset="utf-8">
+</head>
+<style type="text/css">
+body {
+    min-width: 1024px;
+}
+
+#root {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    flex-direction: row;
+    align-items: center;
+    -webkit-align-items: center;
+    -webkit-align-content: center;
+    align-content: center;
+    width: calc(100%-80px);
+    height: 200px;
+    margin: 20px 40px 0 40px;
+    padding: 20px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid black;
+    font-size: 10px;
+}
+
+.son {
+    border: 1px solid black;
+    margin-right: 5px;
+    flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    flex-direction: row;
+    align-items: center;
+    -webkit-align-items: center;
+    -webkit-align-content: center;
+    align-content: center;
+    padding: 20px;
+}
+  #focus{
+    background-color: #FFF25B;
+  }
+div {
+    background: white;
+}
+</style>
+
+<body>
+    <fieldset>
+        <legend>遍历选项</legend>
+        <div>
+            <button id="preOrder">前序</button>
+            <button id="BF">层次遍历</button>
+        </div>
+        <div>
+            <label>时间间隔：</label>
+            <input type="text" value="500" name="">
+            <label>搜索：</label>
+            <input type="text" value="G" name="">
+        </div>
+        <div>
+            <label>增加节点：</label>
+            <input type="text" value="M" name="">
+            <button>增加节点</button>
+            <button>删除选中节点</button>
+        </div>
+    </fieldset>
+    <div id="root">A
+        <div class="son">B
+            <div class="son">C
+                <div class="son">D</div>
+                <div class="son">E</div>
+            </div>
+            <div class="son">F</div>
+        </div>
+        <div class="son">G
+            <div class="son">H</div>
+        </div>
+        <div class="son">I</div>
+    </div>
+</body>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="queue.js"></script>
+
+</html>
